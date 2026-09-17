@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paws, People &amp; Moore</title>
+<meta name="description" content="Dog treats, toys, gifts and more for the pets and people who love them. A small business with a big heart in Werribee and surrounding suburbs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+  :root{
+    --teal-deep:#0f6b70;
+    --teal:#218185;
+    --teal-ink:#134a4e;
+    --aqua:#7fb8b7;
+    --mint:#d9e9e6;
+    --mint-soft:#e9f2f0;
+    --blush:#f8d7d2;
+    --blush-deep:#f4b8b3;
+    --cream:#f8f7f3;
+    --paper:#ffffff;
+    --ink:#1e3a3c;
+    --ink-soft:#4a6a6c;
+    --line:#cfe0de;
+    --shadow:0 18px 40px -22px rgba(15,107,112,.45);
+    --focus:#f4b8b3;
+    --wave-band:#0f6b70;
+    --band-text:#f8f7f3;
+    --radius:22px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --teal-deep:#1d8d93;
+      --teal:#5fb9bd;
+      --teal-ink:#bfe3e3;
+      --aqua:#3d8f92;
+      --mint:#153c3f;
+      --mint-soft:#10393c;
+      --blush:#5a3a3d;
+      --blush-deep:#f0aaa5;
+      --cream:#0b2427;
+      --paper:#10393c;
+      --ink:#eaf3f2;
+      --ink-soft:#a8c5c5;
+      --line:#23565a;
+      --shadow:0 18px 40px -22px rgba(0,0,0,.7);
+      --wave-band:#0f5b60;
+      --band-text:#f4f8f7;
+    }
+  }
+  :root[data-theme="dark"]{
+    --teal-deep:#1d8d93;
+    --teal:#5fb9bd;
+    --teal-ink:#bfe3e3;
+    --aqua:#3d8f92;
+    --mint:#153c3f;
+    --mint-soft:#10393c;
+    --blush:#5a3a3d;
+    --blush-deep:#f0aaa5;
+    --cream:#0b2427;
+    --paper:#10393c;
+    --ink:#eaf3f2;
+    --ink-soft:#a8c5c5;
+    --line:#23565a;
+    --shadow:0 18px 40px -22px rgba(0,0,0,.7);
+    --wave-band:#0f5b60;
+    --band-text:#f4f8f7;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none !important;transition:none !important}
+  }
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--teal-deep)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+
+  .script{font-family:"Dancing Script","Brush Script MT","Segoe Script",cursive;font-weight:700}
+  .caps{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem}
+  h1,h2,h3{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;text-wrap:balance;margin:0;line-height:1.15}
+  h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:700;color:var(--teal-ink)}
+  h3{font-size:1.15rem;font-weight:700;color:var(--teal-ink)}
+  p{margin:0}
+  .wrap{width:min(1120px,100%);margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
+  .measure{max-width:62ch}
+
+  /* header */
+  .top{
+    position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+    background:color-mix(in srgb,var(--cream) 88%,transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px;flex-wrap:wrap;padding-block:8px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--teal-deep)}
+  .brand .script{font-size:1.65rem;line-height:1}
+  .brand svg{width:26px;height:26px;fill:var(--teal-deep)}
+  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:clamp(12px,2.5vw,28px);flex-wrap:wrap}
+  nav a{text-decoration:none;color:var(--ink);font-family:"Montserrat",sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 2px;border-bottom:2px solid transparent}
+  nav a:hover{border-bottom-color:var(--blush-deep)}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--teal-deep);color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:.85rem;white-space:nowrap}
+  .call svg{width:16px;height:16px;fill:currentColor}
+  .call:hover{background:var(--teal)}
+  @media (max-width:760px){ nav{display:none} }
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;background:var(--cream)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(36px,6vw,72px) clamp(20px,3vw,36px)}
+  .portrait{position:relative;isolation:isolate;justify-self:center;width:min(100%,520px)}
+  .portrait img{
+    width:100%;aspect-ratio:470/454;object-fit:cover;
+    border-radius:52% 48% 46% 54% / 46% 52% 48% 54%;
+    box-shadow:var(--shadow);
+    border:8px solid var(--paper);
+  }
+  .portrait::before{
+    content:"";position:absolute;inset:-6% -4% auto auto;width:46%;aspect-ratio:1;z-index:-1;
+    background:var(--blush);border-radius:58% 42% 50% 50% / 50% 60% 40% 50%;
+  }
+  .portrait::after{
+    content:"";position:absolute;left:-8%;bottom:-6%;width:38%;aspect-ratio:1;z-index:-1;
+    background:var(--mint);border-radius:40% 60% 55% 45% / 55% 45% 55% 45%;
+  }
+  .heart-float{position:absolute;width:34px;height:34px;fill:none;stroke:var(--blush-deep);stroke-width:2.2;stroke-linejoin:round}
+  .heart-float.a{top:4%;left:-4%}
+  .heart-float.b{bottom:10%;right:-6%;width:26px;height:26px;stroke:var(--teal)}
+  .hero-copy{display:flex;flex-direction:column;gap:18px}
+  .hero-copy .eyebrow{color:var(--teal);display:flex;align-items:center;gap:12px}
+  .hero-copy .eyebrow::after{content:"";height:1px;width:56px;background:var(--aqua)}
+  .wordmark{display:block;color:var(--teal-deep);font-size:clamp(3.4rem,8vw,5.6rem);line-height:.95}
+  .wordmark .light{color:var(--aqua);font-weight:600}
+  .tagline{font-family:"Montserrat",sans-serif;font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:clamp(.72rem,1.4vw,.9rem);color:var(--teal-ink);display:flex;flex-wrap:wrap;gap:6px 0}
+  .tagline span+span::before{content:"•";color:var(--blush-deep);margin-inline:10px}
+  .lede{font-size:1.1rem;color:var(--ink-soft);max-width:48ch}
+  .motto{
+    display:inline-block;position:relative;isolation:isolate;align-self:flex-start;
+    font-size:clamp(1.7rem,3.4vw,2.3rem);color:var(--teal-deep);padding:6px 22px 8px 18px;
+  }
+  .motto::before{
+    content:"";position:absolute;inset:6% -2% 6% -2%;z-index:-1;background:var(--mint);
+    border-radius:45% 55% 40% 60% / 60% 45% 55% 40%;transform:rotate(-1.5deg);
+  }
+  .motto svg{width:.8em;height:.8em;vertical-align:-.08em;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linejoin:round;margin-left:.15em}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;padding:13px 24px;border-radius:999px;font-family:"Montserrat",sans-serif;font-weight:600;font-size:.9rem;border:2px solid transparent}
+  .btn-primary{background:var(--teal-deep);color:#fff}
+  .btn-primary:hover{background:var(--teal)}
+  .btn-ghost{border-color:var(--teal-deep);color:var(--teal-deep);background:transparent}
+  .btn-ghost:hover{background:var(--mint)}
+  .btn svg{width:18px;height:18px;fill:currentColor}
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr}
+    .portrait{width:min(100%,380px);order:-1}
+  }
+
+  /* wave dividers */
+  .wave{display:block;width:100%;height:clamp(40px,7vw,90px);line-height:0}
+  .wave svg{width:100%;height:100%;display:block}
+
+  /* strip */
+  .strip{background:var(--wave-band);color:var(--band-text)}
+  .strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 0;padding-block:18px}
+  .strip span{font-family:"Montserrat",sans-serif;font-weight:600;letter-spacing:.26em;text-transform:uppercase;font-size:.78rem}
+  .strip span+span::before{content:"•";color:var(--blush-deep);margin-inline:18px}
+
+  /* sections */
+  section{padding-block:clamp(48px,7vw,88px)}
+  .section-head{display:flex;flex-direction:column;gap:10px;margin-bottom:clamp(28px,4vw,44px)}
+  .section-head .caps{color:var(--teal)}
+  .section-head .script{color:var(--blush-deep);font-size:1.6rem;line-height:1}
+  .section-head p{color:var(--ink-soft)}
+
+  /* shop grid */
+  .shop{background:var(--cream)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .card{
+    background:var(--paper);border-radius:var(--radius);padding:28px 26px 30px;
+    display:flex;flex-direction:column;gap:14px;
+    border:1px solid var(--line);
+    transition:transform .25s ease,box-shadow .25s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .icon{
+    width:58px;height:58px;border-radius:18px;display:grid;place-items:center;
+    background:var(--mint);color:var(--teal-deep);
+  }
+  .icon svg{width:30px;height:30px;fill:currentColor}
+  .card:nth-child(2) .icon{background:var(--blush);color:#b8544f}
+  :root[data-theme="dark"] .card:nth-child(2) .icon{color:var(--blush-deep)}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .card:nth-child(2) .icon{color:var(--blush-deep)} }
+  .card p{color:var(--ink-soft);font-size:.98rem}
+  .card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:.93rem}
+  .card li{padding-left:18px;position:relative}
+  .card li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--blush-deep)}
+  .card .more{margin-top:auto;font-family:"Montserrat",sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--teal-deep)}
+  .card .more:hover{text-decoration:underline}
+
+  /* values */
+  .values{background:var(--mint-soft)}
+  .values .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .values-list{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .value{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+  .value .caps{color:var(--teal);font-size:.72rem}
+  .value p{color:var(--ink-soft);font-size:.95rem}
+  .value .num{font-family:"Dancing Script",cursive;font-weight:700;font-size:1.9rem;color:var(--blush-deep);line-height:1}
+  @media (max-width:860px){ .values .wrap{grid-template-columns:1fr} }
+  @media (max-width:520px){ .values-list{grid-template-columns:1fr} }
+
+  /* motto banner */
+  .banner{position:relative;background:var(--wave-band);color:var(--band-text);overflow:hidden;padding-block:clamp(56px,8vw,96px)}
+  .banner .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;position:relative;z-index:1}
+  .banner .script{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.05}
+  .banner .script svg{width:.75em;height:.75em;vertical-align:-.05em;fill:none;stroke:var(--blush-deep);stroke-width:2.4;stroke-linejoin:round;margin-left:.1em}
+  .banner .caps{color:var(--blush-deep);letter-spacing:.3em}
+  .banner p{max-width:52ch;opacity:.92}
+  .banner .paw{position:absolute;right:-40px;bottom:-60px;width:min(46vw,320px);opacity:.16;fill:#fff}
+  .banner .paw.left{right:auto;left:-70px;top:-80px;bottom:auto;width:min(36vw,240px);transform:rotate(-25deg)}
+
+  /* about */
+  .about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .about figure{margin:0;position:relative}
+  .about figure img{border-radius:var(--radius);box-shadow:var(--shadow);border:6px solid var(--paper)}
+  .about figcaption{margin-top:12px;font-size:.85rem;color:var(--ink-soft);text-align:center}
+  .about .copy{display:flex;flex-direction:column;gap:16px}
+  .about .copy p{color:var(--ink-soft)}
+  .about .sig{color:var(--teal-deep);font-size:1.9rem;line-height:1;margin-top:8px}
+  @media (max-width:860px){ .about .wrap{grid-template-columns:1fr} }
+
+  /* contact band */
+  .contact{background:var(--wave-band);color:var(--band-text);padding-block:clamp(48px,7vw,88px)}
+  .contact .wrap{display:grid;grid-template-columns:1.1fr 1px .9fr;gap:clamp(28px,5vw,56px);align-items:center}
+  .contact .rule{background:rgba(255,255,255,.35);height:100%;min-height:200px}
+  .contact h2{color:var(--band-text)}
+  .contact-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+  .contact-list li{display:flex;align-items:center;gap:16px}
+  .contact-list a{color:var(--band-text);text-decoration:none;font-size:1.08rem}
+  .contact-list a:hover{text-decoration:underline;text-decoration-color:var(--blush-deep)}
+  .contact-list .bubble{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--teal-deep);display:grid;place-items:center}
+  .contact-list .bubble svg{width:20px;height:20px;fill:currentColor}
+  .contact-list span.plain{font-size:1.08rem}
+  .contact .aside{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .contact .aside .script{font-size:clamp(2.2rem,4.5vw,3.2rem);line-height:1.05}
+  .contact .aside .heart{width:36px;height:36px;fill:none;stroke:var(--blush-deep);stroke-width:2.4;stroke-linejoin:round}
+  .contact .aside p{opacity:.92;max-width:38ch}
+  .contact .hours{font-size:.9rem;opacity:.85}
+  @media (max-width:860px){
+    .contact .wrap{grid-template-columns:1fr}
+    .contact .rule{display:none}
+  }
+
+  /* footer */
+  footer{background:var(--cream);padding-block:28px 40px}
+  footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+  footer .divider{display:flex;align-items:center;gap:14px;width:min(100%,420px)}
+  footer .divider::before,footer .divider::after{content:"";flex:1;height:1px;background:var(--aqua)}
+  footer .divider svg{width:20px;height:20px;fill:none;stroke:var(--teal-deep);stroke-width:2.2;stroke-linejoin:round}
+  footer .caps{color:var(--teal-deep)}
+  footer .caps span+span::before{content:"•";color:var(--blush-deep);margin-inline:12px}
+  footer small{color:var(--ink-soft);font-size:.85rem}
+  footer .social{display:flex;gap:12px}
+  footer .social a{width:40px;height:40px;border-radius:50%;background:var(--mint);color:var(--teal-deep);display:grid;place-items:center}
+  footer .social a:hover{background:var(--blush)}
+  footer .social svg{width:18px;height:18px;fill:currentColor}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-paw" viewBox="0 0 64 64">
+      <ellipse cx="16" cy="22" rx="7" ry="9.5" transform="rotate(-18 16 22)"/>
+      <ellipse cx="48" cy="22" rx="7" ry="9.5" transform="rotate(18 48 22)"/>
+      <ellipse cx="27" cy="11" rx="6.2" ry="8.5" transform="rotate(-6 27 11)"/>
+      <ellipse cx="37" cy="11" rx="6.2" ry="8.5" transform="rotate(6 37 11)"/>
+      <path d="M32 26c-10 0-19 9-19 19 0 7 5 12 12 12 3 0 5-1 7-2 2 1 4 2 7 2 7 0 12-5 12-12 0-10-9-19-19-19z"/>
+    </symbol>
+    <symbol id="i-paw-heart" viewBox="0 0 64 64">
+      <ellipse cx="16" cy="22" rx="7" ry="9.5" transform="rotate(-18 16 22)"/>
+      <ellipse cx="48" cy="22" rx="7" ry="9.5" transform="rotate(18 48 22)"/>
+      <ellipse cx="27" cy="11" rx="6.2" ry="8.5" transform="rotate(-6 27 11)"/>
+      <ellipse cx="37" cy="11" rx="6.2" ry="8.5" transform="rotate(6 37 11)"/>
+      <path fill-rule="evenodd" d="M32 26c-10 0-19 9-19 19 0 7 5 12 12 12 3 0 5-1 7-2 2 1 4 2 7 2 7 0 12-5 12-12 0-10-9-19-19-19zm0 26c-4-3.5-8-6.5-8-10.5 0-2.3 1.8-4 4-4 1.6 0 3 .9 4 2.2 1-1.3 2.4-2.2 4-2.2 2.2 0 4 1.7 4 4 0 4-4 7-8 10.5z"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path d="M12 20.5C7.5 17 3.5 13.6 3.5 9.3 3.5 6.6 5.6 4.5 8.2 4.5c1.6 0 3 .8 3.8 2.1.8-1.3 2.2-2.1 3.8-2.1 2.6 0 4.7 2.1 4.7 4.8 0 4.3-4 7.7-8.5 11.2z"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.3-8-5.3zM5.3 7l6.7 4.5L18.7 7H5.3z"/>
+    </symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24">
+      <path d="M13.5 21v-7.3h2.5l.4-3h-2.9V8.9c0-.9.3-1.4 1.5-1.4h1.5V4.8c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.2H8v3h2.6V21h2.9z"/>
+    </symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24">
+      <path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zM17 5.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM21 12c0-1.2 0-2.5-.1-3.7-.1-1.4-.4-2.6-1.4-3.6S17.2 3.3 15.8 3.2C14.6 3.1 13.3 3 12 3s-2.5 0-3.7.1c-1.4.1-2.6.4-3.6 1.4S3.3 6.8 3.2 8.2C3.1 9.5 3 10.8 3 12s0 2.5.1 3.7c.1 1.4.4 2.6 1.4 3.6s2.2 1.3 3.6 1.4c1.2.1 2.5.1 3.7.1s2.5 0 3.7-.1c1.4-.1 2.6-.4 3.6-1.4s1.3-2.2 1.4-3.6c.1-1.2.1-2.5.1-3.7zm-2 3.7c-.1 1-.3 1.8-.9 2.4s-1.4.8-2.4.9c-1.1.1-2.4.1-3.7.1s-2.6 0-3.7-.1c-1-.1-1.8-.3-2.4-.9s-.8-1.4-.9-2.4C4.9 14.6 4.9 13.3 4.9 12s0-2.6.1-3.7c.1-1 .3-1.8.9-2.4s1.4-.8 2.4-.9C9.4 4.9 10.7 4.9 12 4.9s2.6 0 3.7.1c1 .1 1.8.3 2.4.9s.8 1.4.9 2.4c.1 1.1.1 2.4.1 3.7s0 2.6-.1 3.7z"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+    </symbol>
+    <symbol id="i-bone" viewBox="0 0 64 64">
+      <path d="M20 18a7 7 0 0 0-7 7c-4 0-7 3-7 7s3 7 7 7a7 7 0 1 0 12-4h14a7 7 0 1 0 12 4c4 0 7-3 7-7s-3-7-7-7a7 7 0 1 0-12 4H25a7 7 0 0 0-5-11z"/>
+    </symbol>
+    <symbol id="i-ball" viewBox="0 0 64 64">
+      <path d="M32 6a26 26 0 1 0 0 52 26 26 0 0 0 0-52zm0 5c4.3 0 8.3 1.3 11.6 3.5A19 19 0 0 0 30 32c0 7.3 4.2 13.7 10.3 16.9A21 21 0 0 1 11 32c0-11.6 9.4-21 21-21zm9 44.5A24 24 0 0 1 35 32a24 24 0 0 1 12.6-14.6A21 21 0 0 1 53 32c0 10-7 18.4-16.4 20.5z"/>
+    </symbol>
+    <symbol id="i-gift" viewBox="0 0 64 64">
+      <path d="M52 20h-6.2a8 8 0 0 0-8.3-11.5c-2.5.5-4.2 2.4-5.5 4.7-1.3-2.3-3-4.2-5.5-4.7A8 8 0 0 0 18.2 20H12a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h1v19a4 4 0 0 0 4 4h30a4 4 0 0 0 4-4V33h1a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zM35.8 13.4c1.6-.4 3.2.7 3.6 2.3.4 1.6-.7 3.2-2.3 3.6-1.2.3-4.5.6-7.2.7.8-2.6 2.5-6 5.9-6.6zm-13.9 5.9c-1.6-.4-2.7-2-2.3-3.6.4-1.6 2-2.7 3.6-2.3 3.4.6 5.1 4 5.9 6.6-2.7-.1-6-.4-7.2-.7zM28 51H18V33h10v18zm0-24H14v-2h14v2zm18 24H36V33h10v18zm4-24H36v-2h14v2z"/>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 64 64">
+      <path d="M32 4c1.5 12 6 20 18 22-12 2-16.5 10-18 22-1.5-12-6-20-18-22 12-2 16.5-10 18-22zM12 40c.8 5 2.6 8 8 9-5.4 1-7.2 4-8 9-.8-5-2.6-8-8-9 5.4-1 7.2-4 8-9zm40-4c.8 5 2.6 8 8 9-5.4 1-7.2 4-8 9-.8-5-2.6-8-8-9 5.4-1 7.2-4 8-9z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Paws, People and Moore home">
+      <svg aria-hidden="true"><use href="#i-paw-heart"/></svg>
+      <span class="script">Paws, People &amp; Moore</span>
+    </a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#why">Why us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="call" href="tel:0424940120"><svg aria-hidden="true"><use href="#i-phone"/></svg>0424 940 120</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="caps eyebrow">Werribee &amp; surrounding suburbs</p>
+        <h1 id="hero-title">
+          <span class="wordmark script">Paws, <span class="light">People</span> &amp; Moore</span>
+        </h1>
+        <p class="tagline"><span>Treats</span><span>Toys</span><span>Gifts</span><span>And More</span></p>
+        <p class="lede">Hand-picked goodies for the pets and people who love them. Natural treats, toys that last, and gifts that make a dog lover's day.</p>
+        <p class="motto script">Because dogs are family <svg aria-hidden="true"><use href="#i-heart"/></svg></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#shop"><svg aria-hidden="true"><use href="#i-paw"/></svg>See what we stock</a>
+          <a class="btn btn-ghost" href="https://instagram.com/pawspeopleandmoore" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Follow along</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <svg class="heart-float a" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg>
+        <img src="assets/hero.jpg" width="470" height="454" alt="Illustration of Courtney with a smiling husky, from the Paws, People and Moore business card" fetchpriority="high">
+        <svg class="heart-float b" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="var(--blush)" d="M0 40C240 90 480 90 720 45S1200 0 1440 40V90H0z"/><path fill="var(--wave-band)" d="M0 60C260 100 520 95 760 55S1180 10 1440 60V90H0z"/></svg>
+  </div>
+
+  <div class="strip" role="presentation">
+    <div class="wrap">
+      <span>Local</span><span>Natural</span><span>Quality</span><span>Community</span>
+    </div>
+  </div>
+
+  <section class="shop" id="shop" aria-labelledby="shop-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="caps">What you'll find</p>
+        <h2 id="shop-title">Treats, toys, gifts &amp; more</h2>
+        <p class="measure">Everything is chosen with a real dog in mind. If your pup is fussy, allergic, or a champion chewer, tell us and we'll point you to the right thing.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="icon"><svg aria-hidden="true"><use href="#i-bone"/></svg></div>
+          <h3>Dog Treats</h3>
+          <p>Natural, single-ingredient and Aussie-made where we can get it. Good for training pockets, long chews for rainy afternoons, and soft bites for seniors.</p>
+          <ul>
+            <li>Kangaroo, beef and chicken jerky</li>
+            <li>Long-lasting chews and dental sticks</li>
+            <li>Grain-free training treats</li>
+            <li>Puppy and senior-friendly options</li>
+          </ul>
+          <a class="more" href="#contact">Ask about treats</a>
+        </article>
+        <article class="card">
+          <div class="icon"><svg aria-hidden="true"><use href="#i-ball"/></svg></div>
+          <h3>Dog Toys</h3>
+          <p>Toys sorted by how your dog plays, not by what looks cute on a shelf. Fetch, tug, snuggle or destroy, we have a match.</p>
+          <ul>
+            <li>Tough chew toys for power chewers</li>
+            <li>Rope and tug toys for two-player fun</li>
+            <li>Snuffle mats and puzzle feeders</li>
+            <li>Plush comfort toys for puppies</li>
+          </ul>
+          <a class="more" href="#contact">Find the right toy</a>
+        </article>
+        <article class="card">
+          <div class="icon"><svg aria-hidden="true"><use href="#i-gift"/></svg></div>
+          <h3>Gifts</h3>
+          <p>For the dog, or for the person who talks about their dog more than their kids. Birthdays, gotcha days, new-puppy welcomes and thank-yous.</p>
+          <ul>
+            <li>Ready-made gift bundles and hampers</li>
+            <li>Custom packs built around your dog</li>
+            <li>Bandanas, bows and collar charms</li>
+            <li>Mugs, keyrings and dog-mum bits</li>
+          </ul>
+          <a class="more" href="#contact">Build a gift</a>
+        </article>
+        <article class="card">
+          <div class="icon"><svg aria-hidden="true"><use href="#i-sparkle"/></svg></div>
+          <h3>And More</h3>
+          <p>The useful stuff that rounds out life with a dog. New things land regularly, so follow us on Instagram to catch them first.</p>
+          <ul>
+            <li>Grooming and paw-care basics</li>
+            <li>Bowls, treat jars and walk accessories</li>
+            <li>Seasonal drops for Christmas and Easter</li>
+            <li>Local delivery around Werribee</li>
+          </ul>
+          <a class="more" href="#contact">See what's new</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="var(--mint-soft)" d="M0 50C300 0 560 0 800 45S1200 95 1440 50V90H0z"/></svg>
+  </div>
+
+  <section class="values" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="caps">Small business, big heart</p>
+        <h2 id="why-title">Why shop with a local instead of a big box?</h2>
+        <p class="measure">Every order is packed by someone who knows what a husky does to a cheap toy. You get honest advice, a friendly face, and money that stays in the west.</p>
+        <p class="script" style="font-size:1.8rem;color:var(--teal-deep)">For the pets and people who love them</p>
+      </div>
+      <div class="values-list">
+        <div class="value">
+          <span class="num script" aria-hidden="true">Local</span>
+          <p class="caps">Werribee &amp; surrounds</p>
+          <p>Based right here, with local pickup and delivery across the western suburbs.</p>
+        </div>
+        <div class="value">
+          <span class="num script" aria-hidden="true">Natural</span>
+          <p class="caps">Ingredients you can read</p>
+          <p>We favour treats with short ingredient lists and no mystery fillers.</p>
+        </div>
+        <div class="value">
+          <span class="num script" aria-hidden="true">Quality</span>
+          <p class="caps">Tested on real dogs</p>
+          <p>If it doesn't survive our own pack, it doesn't make it onto the shelf.</p>
+        </div>
+        <div class="value">
+          <span class="num script" aria-hidden="true">Community</span>
+          <p class="caps">Dog people helping dog people</p>
+          <p>Markets, meet-ups and a growing pack of local pups we know by name.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="var(--mint-soft)" d="M0 0h1440v40C1180 90 900 90 640 45S220 0 0 30z"/><path fill="var(--blush)" d="M1440 90V60C1200 20 980 20 760 55S300 100 0 60v30z" opacity=".9"/></svg>
+  </div>
+
+  <section class="banner" aria-labelledby="motto-title">
+    <svg class="paw left" aria-hidden="true"><use href="#i-paw-heart"/></svg>
+    <svg class="paw" aria-hidden="true"><use href="#i-paw-heart"/></svg>
+    <div class="wrap">
+      <p class="caps">Our motto</p>
+      <h2 class="script" id="motto-title" style="color:inherit;font-family:'Dancing Script',cursive">Because dogs are family <svg aria-hidden="true"><use href="#i-heart"/></svg></h2>
+      <p>They wait by the door, they forgive you instantly, and they never once ask what took you so long. The least we can do is spoil them properly.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <figure>
+        <img src="assets/card-front.jpg" width="1040" height="454" alt="The Paws, People and Moore business card: Courtney and her husky beside the wordmark and motto" loading="lazy">
+        <figcaption>Our card. Keep one in your wallet, or just save this page.</figcaption>
+      </figure>
+      <div class="copy">
+        <p class="caps" style="color:var(--teal)">Meet Courtney</p>
+        <h2 id="about-title">Started by a dog person, for dog people</h2>
+        <p>Paws, People &amp; Moore began the way most good things do: with a dog who deserved better than what the supermarket aisle had to offer. Courtney started sourcing treats and toys for her own pack, friends started asking where she got them, and a small business was born.</p>
+        <p>Today it's still small, still local, and still run by someone who will happily talk about your dog for as long as you like. Every product is something she'd give her own.</p>
+        <p class="script sig">Courtney &amp; the pack</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="var(--blush)" d="M0 45C220 95 460 90 720 50S1220 0 1440 45V90H0z"/><path fill="var(--wave-band)" d="M0 65C300 100 560 95 800 60S1200 15 1440 65V90H0z"/></svg>
+  </div>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div>
+        <p class="caps" style="color:var(--blush-deep);margin-bottom:10px">Get in touch</p>
+        <h2 id="contact-title" style="margin-bottom:26px">Say hello, or send a photo of your dog</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="bubble"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <a href="tel:0424940120">0424 940 120</a>
+          </li>
+          <li>
+            <span class="bubble"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+            <a href="mailto:courtney@pawspetsandmoore.com.au">courtney@pawspetsandmoore.com.au</a>
+          </li>
+          <li>
+            <span class="bubble"><svg aria-hidden="true"><use href="#i-fb"/></svg></span>
+            <a href="https://www.facebook.com/search/top?q=Paws%2C%20People%20%26%20Moore" target="_blank" rel="noopener">Paws, People &amp; Moore</a>
+          </li>
+          <li>
+            <span class="bubble"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+            <a href="https://instagram.com/pawspeopleandmoore" target="_blank" rel="noopener">@pawspeopleandmoore</a>
+          </li>
+          <li>
+            <span class="bubble"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <span class="plain">Werribee and Surrounding Suburbs</span>
+          </li>
+        </ul>
+      </div>
+      <div class="rule" aria-hidden="true"></div>
+      <div class="aside">
+        <p class="script">Small Business<br>Big Heart</p>
+        <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg>
+        <p>Message us on Instagram or Facebook for the quickest reply. Local pickup and delivery around Werribee can be arranged, and gift bundles can be made to order.</p>
+        <p class="hours">Replies usually within the day. Dogs welcome in every conversation.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="divider"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg></div>
+    <p class="caps"><span>Local</span><span>Natural</span><span>Quality</span><span>Community</span></p>
+    <div class="social">
+      <a href="https://www.facebook.com/search/top?q=Paws%2C%20People%20%26%20Moore" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+      <a href="https://instagram.com/pawspeopleandmoore" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      <a href="mailto:courtney@pawspetsandmoore.com.au" aria-label="Email"><svg aria-hidden="true"><use href="#i-mail"/></svg></a>
+    </div>
+    <small>&copy; 2026 Paws, People &amp; Moore &middot; Werribee, Victoria &middot; Because dogs are family</small>
+  </div>
+</footer>
+
+</body>
+</html>
